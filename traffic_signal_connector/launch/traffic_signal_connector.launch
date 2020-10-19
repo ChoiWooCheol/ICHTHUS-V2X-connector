@@ -1,0 +1,9 @@
+<launch>
+    <arg name="csv_path" default="/home/autoware/shared_dir/data/alpha_city/signal_table.csv" />
+    <arg name="test" default="False" />
+
+    <node name="traffic_signal_connector" pkg="traffic_signal_connector" type="traffic_signal_connector_node" output="screen" >
+        <param name="csv_path" value="$(arg csv_path)"/>
+        <param name="test" value="$(arg test)"/>
+    </node>
+</launch>
